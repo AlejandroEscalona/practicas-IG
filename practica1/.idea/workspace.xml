@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated />
   </component>
@@ -9,7 +27,22 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e0cb7aa-bafb-4321-8740-f40b6ae906a4" name="Default Changelist" comment="" />
+    <list default="true" id="0e0cb7aa-bafb-4321-8740-f40b6ae906a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/beethoven.ply" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/file_ply_stl.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/file_ply_stl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/file_ply_stl.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/objetos_B2.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/objetos_B2.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/objetos_B2.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/practica_objetos_B2.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/practica_objetos_B2.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/vertex.h" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +51,11 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1iUM9hfIVvYhtsM3bbGgx3fAzTE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,6 +67,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -43,16 +87,32 @@
       <workItem from="1602007667059" duration="298000" />
       <workItem from="1602043502253" duration="1677000" />
       <workItem from="1602080829352" duration="228000" />
+      <workItem from="1602956584041" duration="818000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="133" y="107" key="SettingsEditor" timestamp="1602080873556">
       <screen x="0" y="28" width="1024" height="740" />
     </state>
     <state x="133" y="107" key="SettingsEditor/1024.0.1920.1080/0.28.1024.740@0.28.1024.740" timestamp="1602080873556" />
+    <state x="3382" y="153" width="1203" height="932" key="dock-window-1" timestamp="1602957401352">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3382" y="153" width="1203" height="932" key="dock-window-1/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1602957401352" />
   </component>
 </project>
