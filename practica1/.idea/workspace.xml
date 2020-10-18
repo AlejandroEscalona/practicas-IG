@@ -29,8 +29,21 @@
   <component name="ChangeListManager">
     <list default="true" id="0e0cb7aa-bafb-4321-8740-f40b6ae906a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/bin/file_ply_stl.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/bin/objetos_B2.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/bin/practica_objetos_B2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/bin/practica_objetos_B2.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/data/beethoven.ply" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../practica2/data/cilindro.ply" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../practica2/data/cono.ply" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/include/file_ply_stl.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/include/objetos_B2.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/include/vertex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/practica_objetos_B2" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/practica_objetos_B2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/src/file_ply_stl.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/src/objetos_B2.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/src/practica_objetos_B2.cc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +83,7 @@
       <workItem from="1602043502253" duration="1677000" />
       <workItem from="1602080829352" duration="228000" />
       <workItem from="1602956584041" duration="818000" />
-      <workItem from="1603000732195" duration="1738000" />
+      <workItem from="1603000732195" duration="2038000" />
     </task>
     <servers />
   </component>
