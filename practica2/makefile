@@ -1,10 +1,10 @@
 .PHONY: x clean tar
 
-EJECUTABLE= practica_objetos_B2 data/
+EJECUTABLE= practica_objetos_B2
 
-MODULOS:= bin/practica_objetos_B2.o\
-         bin/objetos_B2.o\
-         bin/file_ply_stl.o\
+MODULOS:= practica_objetos_B2.o\
+         objetos_B2.o\
+         file_ply_stl.o\
       
 LIBS:= -lglut -lGLU -lGL -lsupc++ -lm -lc -lstdc++ -lpthread -L/usr/lib/nvidia-331
 CPPFLAGS:= -Wall -fmax-errors=2 -g
@@ -12,7 +12,7 @@ CPPFLAGS:= -Wall -fmax-errors=2 -g
 CC= g++
 
 x: $(EJECUTABLE)
-	./$(EJECUTABLE)beethoven
+	./$(EJECUTABLE) beethoven
 
 $(EJECUTABLE): $(MODULOS)	
 	$(CC) -o $(EJECUTABLE) $(LDFLAGS) $(MODULOS) $(LIBS) 

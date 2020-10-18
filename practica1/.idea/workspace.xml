@@ -29,19 +29,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0e0cb7aa-bafb-4321-8740-f40b6ae906a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/beethoven.ply" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/file_ply_stl.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/file_ply_stl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/file_ply_stl.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/objetos_B2.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/objetos_B2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/objetos_B2.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/practica_objetos_B2.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/practica_objetos_B2.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/vertex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/data/cilindro.ply" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica2/data/cono.ply" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +57,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +70,7 @@
       <workItem from="1602043502253" duration="1677000" />
       <workItem from="1602080829352" duration="228000" />
       <workItem from="1602956584041" duration="818000" />
+      <workItem from="1603000732195" duration="1738000" />
     </task>
     <servers />
   </component>
@@ -104,8 +87,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="638" y="347" width="610" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603006637716">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="638" y="347" width="610" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1603006637716" />
     <state x="133" y="107" key="SettingsEditor" timestamp="1602080873556">
       <screen x="0" y="28" width="1024" height="740" />
     </state>
