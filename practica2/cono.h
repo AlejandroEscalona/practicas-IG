@@ -4,11 +4,12 @@
 
 #ifndef PRACTICA2_CONO_H
 #define PRACTICA2_CONO_H
+#include "cilindro.h"
 
-#include "objetos_B2.h"
 
-class _cono: public _rotacion
-{
+
+class _cono: public _triangulos3D{
+
 public:
 
     _cono(float tam=0.5, float al=0.75);

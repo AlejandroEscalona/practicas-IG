@@ -7,12 +7,13 @@
 #include <math.h>
 #include <vector>
 #include "cilindro.h"
+#include "cono.h"
 
 
 using namespace std;
 
 // tipos
-typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, ROTACION, CILINDRO} _tipo_objeto;
+typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, ROTACION, CILINDRO, CONO} _tipo_objeto;
 _tipo_objeto t_objeto=CUBO;
 _modo   modo=POINTS;
 
@@ -31,6 +32,7 @@ int Window_x=50,Window_y=50,Window_width=450,Window_high=450;
 // objetos
 _cubo cubo;
 _piramide piramide(0.85,1.3);
+_cono cono(1,1.5);
 _objeto_ply  ply; 
 _rotacion rotacion;
 
@@ -119,6 +121,7 @@ switch (t_objeto){
         case OBJETO_PLY: ply.draw(modo,1.0,0.6,0.0,0.0,1.0,0.3,2);break;
         case ROTACION: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
         case CILINDRO:  rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+        case CONO: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
 	}
 
 }
@@ -182,6 +185,7 @@ switch (toupper(Tecla1)){
         case 'O':t_objeto=OBJETO_PLY;break;	
         case 'R':t_objeto=ROTACION;break;
         case 'K': t_objeto=CILINDRO;break;
+        case 'A': t_objeto=CONO;break;
 	}
 glutPostRedisplay();
 }
@@ -269,7 +273,7 @@ aux.x=1.0; aux.y=1.0; aux.z=0.0;
 perfil2.push_back(aux);
 
 
-rotacion.parametros(perfil2,6);
+rotacion.parametros(perfil2,6,0);
 
 
 

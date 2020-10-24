@@ -238,9 +238,12 @@ _rotacion::_rotacion()
 {
 
 }
-
-
-void _rotacion::parametros(vector<_vertex3f> perfil, int num)
+/*
+Tipo de objeto: 0 = cilindro
+Tipo de objeto: 1 = cono
+Tipo de objeto: 2 = esfera
+*/
+void _rotacion::parametros(vector<_vertex3f> perfil, int num, int tipo_objeto)
 {
 int i,j;
 _vertex3f vertice_aux;
@@ -276,38 +279,37 @@ int c=0;
        caras[c]._2=j*2;
        c=c+1;
     }
-     
- // tapa inferior
-if (fabs(perfil[0].x)>0.0)
-  {
-    vertices[num_aux*num].x=0.0;
-    vertices[num_aux*num].y=perfil[0].y;
-    vertices[num_aux*num].z=0.0;
 
-    for(j=0; j<num-1;j++){
-        caras[c]._0=num_aux*num;
-        caras[c]._1=j*2;
-        caras[c]._2=(j+1)*2;
-        c=c+1;
-    }
-  }
- 
- // tapa superior
- if (fabs(perfil[num_aux-1].x)>0.0)
-  {
-      vertices[num_aux*num+1].x=0.0;
-      vertices[num_aux*num+1].y=perfil[num_aux-1].y;
-      vertices[num_aux*num+1].z=0.0;
+  if(tipo_objeto == 0) {
+      // tapa inferior
+      if (fabs(perfil[0].x) > 0.0) {
+          vertices[num_aux * num].x = 0.0;
+          vertices[num_aux * num].y = perfil[0].y;
+          vertices[num_aux * num].z = 0.0;
 
-      for(j=0; j<num-1;j++){
-          caras[c]._0=num_aux*num+1;
-          caras[c]._1=j*2+1;
-          caras[c]._2=(j+1)*2+1;
-          c=c+1;
+          for (j = 0; j < num - 1; j++) {
+              caras[c]._0 = num_aux * num;
+              caras[c]._1 = j * 2;
+              caras[c]._2 = (j + 1) * 2;
+              c = c + 1;
+          }
       }
 
+      // tapa superior
+      if (fabs(perfil[num_aux - 1].x) > 0.0) {
+          vertices[num_aux * num + 1].x = 0.0;
+          vertices[num_aux * num + 1].y = perfil[num_aux - 1].y;
+          vertices[num_aux * num + 1].z = 0.0;
 
+          for (j = 0; j < num - 1; j++) {
+              caras[c]._0 = num_aux * num + 1;
+              caras[c]._1 = j * 2 + 1;
+              caras[c]._2 = (j + 1) * 2 + 1;
+              c = c + 1;
+          }
+      }
   }
+
 }
 
 
