@@ -32,9 +32,10 @@ int Window_x=50,Window_y=50,Window_width=450,Window_high=450;
 // objetos
 _cubo cubo;
 _piramide piramide(0.85,1.3);
-_cono cono(1,1.5);
 _objeto_ply  ply; 
 _rotacion rotacion;
+_cilindro cilindro(0.5,1);
+_cono cono;
 
 
 
@@ -120,8 +121,8 @@ switch (t_objeto){
 	case PIRAMIDE: piramide.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
         case OBJETO_PLY: ply.draw(modo,1.0,0.6,0.0,0.0,1.0,0.3,2);break;
         case ROTACION: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
-        case CILINDRO:  rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
-        case CONO: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+        case CILINDRO:  cilindro.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+        case CONO: cono.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
 	}
 
 }

@@ -281,6 +281,13 @@ int c=0;
     }
 
   if(tipo_objeto == 0) {
+
+      caras[c]._0=j*2;
+      caras[c]._1=j*2+1;
+      caras[c]._2=(j+1)*2+1;
+
+
+
       // tapa inferior
       if (fabs(perfil[0].x) > 0.0) {
           vertices[num_aux * num].x = 0.0;

@@ -8,7 +8,7 @@
 
 
 
-class _cono: public _triangulos3D{
+class _cono: public _rotacion{
 
 public:
 

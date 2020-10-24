@@ -6,9 +6,9 @@
 #define PRACTICA2_CILINDRO_H
 #include "objetos_B2.h"
 
-class Cilindro: public _triangulos3D{
+class _cilindro: public _rotacion{
 public:
-    Cilindro();
+    _cilindro(int radio, int altura);
 } ;
 
 #endif //PRACTICA2_CILINDRO_H
