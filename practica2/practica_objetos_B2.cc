@@ -6,13 +6,13 @@
 #include <ctype.h>
 #include <math.h>
 #include <vector>
-#include "cono.h"
+#include "cilindro.h"
 
 
 using namespace std;
 
 // tipos
-typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, ROTACION, CONO} _tipo_objeto;
+typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, ROTACION, CILINDRO} _tipo_objeto;
 _tipo_objeto t_objeto=CUBO;
 _modo   modo=POINTS;
 
@@ -33,7 +33,7 @@ _cubo cubo;
 _piramide piramide(0.85,1.3);
 _objeto_ply  ply; 
 _rotacion rotacion;
-_cono cono(0.85,1.5);
+
 
 
 // _objeto_ply *ply1;
@@ -118,7 +118,7 @@ switch (t_objeto){
 	case PIRAMIDE: piramide.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
         case OBJETO_PLY: ply.draw(modo,1.0,0.6,0.0,0.0,1.0,0.3,2);break;
         case ROTACION: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
-    case CONO: piramide.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+        case CILINDRO:  rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
 	}
 
 }
@@ -181,7 +181,7 @@ switch (toupper(Tecla1)){
         case 'C':t_objeto=CUBO;break;
         case 'O':t_objeto=OBJETO_PLY;break;	
         case 'R':t_objeto=ROTACION;break;
-        case 'K': t_objeto=CONO;break;
+        case 'K': t_objeto=CILINDRO;break;
 	}
 glutPostRedisplay();
 }

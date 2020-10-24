@@ -250,7 +250,7 @@ int num_aux;
 // tratamiento de los vértice
 
 num_aux=perfil.size();
-vertices.resize(num_aux*num);
+vertices.resize(num_aux*num+2);
 for (j=0;j<num;j++)
   {for (i=0;i<num_aux;i++)
      {
@@ -264,27 +264,49 @@ for (j=0;j<num;j++)
   }
 
 // tratamiento de las caras
-caras_aux.resize(num_aux*num);
-    for (j=0;j<num;j++)
-    {for (i=0;i<num_aux;i++)
-        {
-            vertice_aux.x=perfil[i].x*cos(2.0*M_PI*j/(1.0*num))+
-                          perfil[i].z*sin(2.0*M_PI*j/(1.0*num));
-            vertice_aux.z=-perfil[i].x*sin(2.0*M_PI*j/(1.0*num))+
-                          perfil[i].z*cos(2.0*M_PI*j/(1.0*num));
-            vertice_aux.y=perfil[i].y;
-            vertices[i+j*num_aux]=vertice_aux;
-        }
+caras.resize((num_aux-1)*2*num+2*num);
+int c=0;
+    for (j=0;j<num-1;j++){
+       caras[c]._0=j*2;
+       caras[c]._1=j*2+1;
+       caras[c]._2=(j+1)*2+1;
+       c=c+1;
+       caras[c]._0=(j+1)*2+1;
+       caras[c]._1=(j+1)*2;
+       caras[c]._2=j*2;
+       c=c+1;
     }
      
  // tapa inferior
 if (fabs(perfil[0].x)>0.0)
   {
+    vertices[num_aux*num].x=0.0;
+    vertices[num_aux*num].y=perfil[0].y;
+    vertices[num_aux*num].z=0.0;
+
+    for(j=0; j<num-1;j++){
+        caras[c]._0=num_aux*num;
+        caras[c]._1=j*2;
+        caras[c]._2=(j+1)*2;
+        c=c+1;
+    }
   }
  
  // tapa superior
  if (fabs(perfil[num_aux-1].x)>0.0)
   {
+      vertices[num_aux*num+1].x=0.0;
+      vertices[num_aux*num+1].y=perfil[num_aux-1].y;
+      vertices[num_aux*num+1].z=0.0;
+
+      for(j=0; j<num-1;j++){
+          caras[c]._0=num_aux*num+1;
+          caras[c]._1=j*2+1;
+          caras[c]._2=(j+1)*2+1;
+          c=c+1;
+      }
+
+
   }
 }
 
