@@ -2,8 +2,8 @@
 // Created by aescx on 25/10/20.
 //
 
-#ifndef PRÁCTICA_2_ESFERA_H
-#define PRÁCTICA_2_ESFERA_H
+//#ifndef PRÁCTICA_2_ESFERA_H
+//#define PRÁCTICA_2_ESFERA_H
 #include "objetos_B2.h"
 
 
@@ -17,5 +17,5 @@ public:
 };
 
 
-
-#endif //PRÁCTICA_2_ESFERA_H
+//
+//#endif //PRÁCTICA_2_ESFERA_H

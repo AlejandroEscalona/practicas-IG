@@ -2,8 +2,8 @@
 // Created by aescx on 25/10/20.
 //
 
-#ifndef PRÁCTICA_2__CILINDRO_H
-#define PRÁCTICA_2__CILINDRO_H
+//#ifndef PRACTICA_2_CILINDRO_H
+//#define PRACTICA_2_CILINDRO_H
 #include "objetos_B2.h"
 
 class _cilindro: public _rotacion{
@@ -14,4 +14,4 @@ public:
 };
 
 
-#endif //PRÁCTICA_2__CILINDRO_H
+//#endif //PRÁCTICA_2__CILINDRO_H

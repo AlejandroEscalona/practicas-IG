@@ -1,12 +1,11 @@
 //**************************************************************************
 // Práctica 1 usando objetos
 //**************************************************************************
-
 #include <GL/glut.h>
 #include <ctype.h>
 #include <math.h>
 #include <vector>
-//#include "objetos_B2.h"
+#include "objetos_B2.h"
 #include "cilindro.h"
 #include "esfera.h"
 #include "cono.h"
@@ -96,15 +95,15 @@ glDisable(GL_LIGHTING);
 glLineWidth(2);
 glBegin(GL_LINES);
 // eje X, color rojo
-glColoT3f(1,0,0);
+//glColoT3f(1,0,0);
 glVertex3f(-AXIS_SIZE,0,0);
 glVertex3f(AXIS_SIZE,0,0);
 // eje Y, color verde
-glColoT3f(0,1,0);
+//glColoT3f(0,1,0);
 glVertex3f(0,-AXIS_SIZE,0);
 glVertex3f(0,AXIS_SIZE,0);
 // eje Z, color azul
-glColoT3f(0,0,1);
+//glColoT3f(0,0,1);
 glVertex3f(0,0,-AXIS_SIZE);
 glVertex3f(0,0,AXIS_SIZE);
 glEnd();
@@ -271,7 +270,7 @@ int main(int argc, char *argv[] )
 
 // perfil 
 
-vector<_vertex3f> perfil6;
+vector<_vertex3f> perfil5;
 _vertex3f aux;
 
 ply1.parametros("lampara");

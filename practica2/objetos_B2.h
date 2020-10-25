@@ -1,6 +1,9 @@
 //**************************************************************************
 // Práctica 2 usando objetos
 //**************************************************************************
+#ifndef OBJETOS_B2_H
+#define OBJETOS_B2_H
+
 
 #include <vector>
 #include <GL/gl.h>
@@ -93,3 +96,5 @@ void  parametros(vector<_vertex3f> perfil1, int num1, _figura f, int al=2);
 vector<_vertex3f> perfil; 
 int num;
 };
+
+#endif
