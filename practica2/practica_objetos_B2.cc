@@ -6,14 +6,17 @@
 #include <ctype.h>
 #include <math.h>
 #include <vector>
+//#include "objetos_B2.h"
 #include "cilindro.h"
+#include "esfera.h"
 #include "cono.h"
+#include "cilindrox.h"
 
 
 using namespace std;
 
 // tipos
-typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, ROTACION, CILINDRO, CONO} _tipo_objeto;
+typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, T1, T2, T3, T4, T5} _tipo_objeto;
 _tipo_objeto t_objeto=CUBO;
 _modo   modo=POINTS;
 
@@ -32,13 +35,12 @@ int Window_x=50,Window_y=50,Window_width=450,Window_high=450;
 // objetos
 _cubo cubo;
 _piramide piramide(0.85,1.3);
-_objeto_ply  ply; 
-_rotacion rotacion;
-_cilindro cilindro(0.5,1);
+_objeto_ply  ply, ply1; 
+_rotacion lampara;
+_cilindro cilindro;
+_esfera esfera;
 _cono cono;
-
-
-
+_cilindrox cilindrox;
 // _objeto_ply *ply1;
 
 
@@ -94,15 +96,15 @@ glDisable(GL_LIGHTING);
 glLineWidth(2);
 glBegin(GL_LINES);
 // eje X, color rojo
-glColor3f(1,0,0);
+glColoT3f(1,0,0);
 glVertex3f(-AXIS_SIZE,0,0);
 glVertex3f(AXIS_SIZE,0,0);
 // eje Y, color verde
-glColor3f(0,1,0);
+glColoT3f(0,1,0);
 glVertex3f(0,-AXIS_SIZE,0);
 glVertex3f(0,AXIS_SIZE,0);
 // eje Z, color azul
-glColor3f(0,0,1);
+glColoT3f(0,0,1);
 glVertex3f(0,0,-AXIS_SIZE);
 glVertex3f(0,0,AXIS_SIZE);
 glEnd();
@@ -120,9 +122,11 @@ switch (t_objeto){
 	case CUBO: cubo.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
 	case PIRAMIDE: piramide.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
         case OBJETO_PLY: ply.draw(modo,1.0,0.6,0.0,0.0,1.0,0.3,2);break;
-        case ROTACION: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
-        case CILINDRO:  cilindro.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
-        case CONO: cono.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+        case T1: cilindro.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+		case T2: cono.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+		case T3: esfera.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+		case T4: lampara.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
+		case T5: cilindrox.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
 	}
 
 }
@@ -184,9 +188,11 @@ switch (toupper(Tecla1)){
         case 'P':t_objeto=PIRAMIDE;break;
         case 'C':t_objeto=CUBO;break;
         case 'O':t_objeto=OBJETO_PLY;break;	
-        case 'R':t_objeto=ROTACION;break;
-        case 'K': t_objeto=CILINDRO;break;
-        case 'A': t_objeto=CONO;break;
+        case 'R':t_objeto=T1;break;
+		case 'T':t_objeto=T2;break;
+		case 'Y':t_objeto=T3;break;
+		case 'U':t_objeto=T4;break;
+		case 'I':t_objeto=T5;break;
 	}
 glutPostRedisplay();
 }
@@ -265,16 +271,13 @@ int main(int argc, char *argv[] )
 
 // perfil 
 
-vector<_vertex3f> perfil2;
+vector<_vertex3f> perfil6;
 _vertex3f aux;
 
-aux.x=1.0; aux.y=-1.0; aux.z=0.0;
-perfil2.push_back(aux);
-aux.x=1.0; aux.y=1.0; aux.z=0.0;
-perfil2.push_back(aux);
+ply1.parametros("lampara");
+perfil5 = ply1.vertices;
 
-
-rotacion.parametros(perfil2,6,0);
+lampara.parametros(perfil5,20,_figura::PLY,1);
 
 
 

@@ -5,6 +5,7 @@ EJECUTABLE= practica_objetos_B2
 MODULOS:= practica_objetos_B2.o\
          objetos_B2.o\
          file_ply_stl.o\
+         esfera.o\
          cono.o\
          cilindro.o\
       

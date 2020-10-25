@@ -1,14 +1,17 @@
 //
-// Created by aescx on 18/10/20.
+// Created by aescx on 25/10/20.
 //
 
-#ifndef PRACTICA2_CILINDRO_H
-#define PRACTICA2_CILINDRO_H
+#ifndef PRÁCTICA_2__CILINDRO_H
+#define PRÁCTICA_2__CILINDRO_H
 #include "objetos_B2.h"
 
 class _cilindro: public _rotacion{
 public:
-    _cilindro(int radio, int altura);
-} ;
+    _cilindro();
+    vector<_vertex3f> perfil;
 
-#endif //PRACTICA2_CILINDRO_H
+};
+
+
+#endif //PRÁCTICA_2__CILINDRO_H

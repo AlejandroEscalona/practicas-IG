@@ -1,17 +1,17 @@
 //
-// Created by aescx on 18/10/20.
+// Created by aescx on 25/10/20.
 //
 
 #include "cono.h"
+using namespace std;
 
-_cono::_cono(float tam, float al)
+_cono::_cono()
 {
-//vertices
-    _rotacion rotacion;
-    std::vector<_vertex3f> perfil1;
-    int num=10;
-    perfil1.push_back({1.0,0,0}) ;
+    _vertex3f aux;
+    aux.x=1.0; aux.y=-1.0; aux.z=0.0;
+    perfil.push_back(aux);
 
-    rotacion.parametros(perfil1, num,1) ;
+    parametros(perfil,20,_figura::CONO,2);
 
 }
+

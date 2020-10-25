@@ -1,21 +1,17 @@
 //
-// Created by aescx on 18/10/20.
+// Created by aescx on 25/10/20.
 //
 
 #include "cilindro.h"
-using namespace std;
 
-
-_cilindro::_cilindro(int radio, int altura)
+_cilindro::_cilindro()
 {
-    _rotacion rotacion;
-    std::vector<_vertex3f> perfil1;
-    int num=10;
-    perfil1.push_back({radio,0,0}) ;
-    perfil1.push_back({radio,altura,0}) ;
+    _vertex3f aux;
 
-    parametros(perfil1, num,0);
+    aux.x=1.0; aux.y=-1.0; aux.z=0.0;
+    perfil.push_back(aux);
+    aux.x=1.0; aux.y=1.0; aux.z=0.0;
+    perfil.push_back(aux);
 
-
-
+    parametros(perfil,20,_figura::CILINDRO,1);
 }

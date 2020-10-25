@@ -1,5 +1,5 @@
 //**************************************************************************
-// Práctica 1 usando objetos
+// Práctica 2 usando objetos
 //**************************************************************************
 
 #include <vector>
@@ -10,6 +10,7 @@
 
 const float AXIS_SIZE=5000;
 typedef enum{POINTS,EDGES,SOLID_CHESS,SOLID} _modo;
+typedef enum{CILINDRO,PLY,CONO,ESFERA,CILINDROX} _figura;
 
 //*************************************************************************
 // clase punto
@@ -87,10 +88,8 @@ class _rotacion: public _triangulos3D
 {
 public:
        _rotacion();
-void  parametros(vector<_vertex3f> perfil1, int num1,int tipo_objeto);
+void  parametros(vector<_vertex3f> perfil1, int num1, _figura f, int al=2);
 
 vector<_vertex3f> perfil; 
 int num;
 };
-
-

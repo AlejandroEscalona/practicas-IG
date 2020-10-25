@@ -1,18 +1,17 @@
 //
-// Created by aescx on 18/10/20.
+// Created by aescx on 25/10/20.
 //
 
-#ifndef PRACTICA2_CONO_H
-#define PRACTICA2_CONO_H
-#include "cilindro.h"
-
-
+#ifndef PRÁCTICA_2_CONO_H
+#define PRÁCTICA_2_CONO_H
+#include "objetos_B2.h"
 
 class _cono: public _rotacion{
 
-public:
+    public:
+        _cono();
+        vector<_vertex3f> perfil;
+    };
 
-    _cono(float tam=0.5, float al=0.75);
-};
 
-#endif //PRACTICA2_CONO_H
+#endif //PRÁCTICA_2_CONO_H
