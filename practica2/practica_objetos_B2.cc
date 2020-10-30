@@ -98,15 +98,15 @@ glDisable(GL_LIGHTING);
 glLineWidth(2);
 glBegin(GL_LINES);
 // eje X, color rojo
-//glColoT3f(1,0,0);
+glColor3f(1,0,0);
 glVertex3f(-AXIS_SIZE,0,0);
 glVertex3f(AXIS_SIZE,0,0);
 // eje Y, color verde
-//glColoT3f(0,1,0);
+glColor3f(0,1,0);
 glVertex3f(0,-AXIS_SIZE,0);
 glVertex3f(0,AXIS_SIZE,0);
 // eje Z, color azul
-//glColoT3f(0,0,1);
+glColor3f(0,0,1);
 glVertex3f(0,0,-AXIS_SIZE);
 glVertex3f(0,0,AXIS_SIZE);
 glEnd();
@@ -189,12 +189,12 @@ switch (toupper(Tecla1)){
 	case '4':modo=SOLID_CHESS;break;
         case 'P':t_objeto=PIRAMIDE;break;
         case 'C':t_objeto=CUBO;break;
-        case 'O':t_objeto=OBJETO_PLY;break;	
-        case 'R':t_objeto=T1;break;
-		case 'T':t_objeto=T2;break;
-		case 'Y':t_objeto=T3;break;
-		case 'U':t_objeto=T4;break;
-		case 'I':t_objeto=T5;break;
+        case 'O':t_objeto=OBJETO_PLY;break;
+        case 'R':t_objeto=T1;break; //Cilindro
+		case 'T':t_objeto=T2;break; //Cono
+		case 'Y':t_objeto=T3;break; //Esfera
+		case 'U':t_objeto=T4;break; //Objeto ply creado por revolución
+		case 'I':t_objeto=T5;break; //Cilindro creado por revolución en eje X
 	}
 glutPostRedisplay();
 }

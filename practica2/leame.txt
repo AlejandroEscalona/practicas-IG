@@ -1,10 +1,13 @@
+Practica 2 IG
+Realizado por Alejandro Escalona García
+
 Teclas para activar las figuras:
 C: cubo
 P: pirámide
 R: Cilindro
 T: Cono
 Y: Esfera
-U: Lámpara (objeto creado rotando el perfil ply creado por mí)
+U: Lámpara (objeto creado rotando el perfil ply)
 I: Cilindro rotado sobre el eje X (subir nota)
 O: Beethoven
 

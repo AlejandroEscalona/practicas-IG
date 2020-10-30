@@ -254,7 +254,7 @@ if (f==_figura::PLY){ // Quitamos la cara que hemos puesto para que nos lea el p
 
 num_aux=perfil.size();
 
-if (perfil[0].y>perfil[num_aux-1].y){ // Damos la vuelta si nos dan el perfil al revés
+if (perfil[0].y>perfil[num_aux-1].y){ // Le damos la vuelta si nos dan el perfil al revés
 	for (int c=0;c<num_aux;c++)
 		perfil[c]=perfil[num_aux-1-c];
 }

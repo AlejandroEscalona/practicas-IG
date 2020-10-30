@@ -13,7 +13,7 @@
 
 const float AXIS_SIZE=5000;
 typedef enum{POINTS,EDGES,SOLID_CHESS,SOLID} _modo;
-typedef enum{CILINDRO,PLY,CONO,ESFERA,CILINDROX} _figura;
+typedef enum{CILINDRO,CONO,ESFERA,CILINDROX,PLY} _figura;
 
 //*************************************************************************
 // clase punto
