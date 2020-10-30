@@ -1,5 +1,6 @@
 //**************************************************************************
-// Práctica 1 usando objetos
+// Práctica 2 usando objetos
+// Realizado por Alejandro Escalona García (AESCX)
 //**************************************************************************
 #include <GL/glut.h>
 #include <ctype.h>
@@ -10,6 +11,8 @@
 #include "esfera.h"
 #include "cono.h"
 #include "cilindrox.h"
+#include "ply_revolucion.h"
+
 
 
 using namespace std;
@@ -34,13 +37,13 @@ int Window_x=50,Window_y=50,Window_width=450,Window_high=450;
 // objetos
 _cubo cubo;
 _piramide piramide(0.85,1.3);
-_objeto_ply  ply, ply1; 
-_rotacion lampara;
+_objeto_ply  ply;
+_ply_revolucion lampara;
 _cilindro cilindro;
 _esfera esfera;
 _cono cono;
 _cilindrox cilindrox;
-// _objeto_ply *ply1;
+
 
 
 //**************************************************************************
@@ -264,21 +267,6 @@ glViewport(0,0,Window_width,Window_high);
 
 int main(int argc, char *argv[] )
 {
- 
-
-
-
-// perfil 
-
-vector<_vertex3f> perfil5;
-_vertex3f aux;
-
-ply1.parametros("lampara");
-perfil5 = ply1.vertices;
-
-lampara.parametros(perfil5,20,_figura::PLY,1);
-
-
 
 // se llama a la inicialización de glut
 glutInit(&argc, argv);
