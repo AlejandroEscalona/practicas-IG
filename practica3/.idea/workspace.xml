@@ -18,21 +18,30 @@
     </expand>
     <select />
   </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="25e929f6-891d-41df-9858-1fe8b405d6b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../practica2/.idea/practica2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/.idea/practica2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/cilindro.o" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/cilindro.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/cilindrox.o" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/cilindrox.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/cono.o" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/cono.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/esfera.o" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/esfera.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/objetos_B2.o" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/objetos_B2.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/ply_revolucion.o" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/ply_revolucion.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica2/practica_objetos_B2" beforeDir="false" afterPath="$PROJECT_DIR$/../practica2/practica_objetos_B2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_ply_stl.o" beforeDir="false" afterPath="$PROJECT_DIR$/file_ply_stl.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objetos_B3.o" beforeDir="false" afterPath="$PROJECT_DIR$/objetos_B3.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practica_objetos_B3" beforeDir="false" afterPath="$PROJECT_DIR$/practica_objetos_B3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practica_objetos_B3.cc" beforeDir="false" afterPath="$PROJECT_DIR$/practica_objetos_B3.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practica_objetos_B3.o" beforeDir="false" afterPath="$PROJECT_DIR$/practica_objetos_B3.o" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ComposerSettings">
     <execution />
@@ -50,6 +59,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -63,6 +73,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604684280283</updated>
       <workItem from="1604684281461" duration="139000" />
+      <workItem from="1604684439076" duration="925000" />
+      <workItem from="1604739263105" duration="636000" />
     </task>
     <servers />
   </component>
@@ -79,11 +91,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2580" y="355" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604684300162">
+    <state x="2580" y="355" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604684453646">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2580" y="355" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604684300162" />
+    <state x="2580" y="355" width="589" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604684453646" />
+    <state x="2663" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604684732500">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2663" y="311" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604684732500" />
+    <state x="3022" y="377" width="618" height="522" key="find.popup" timestamp="1604684622508">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3022" y="377" width="618" height="522" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1604684622508" />
   </component>
 </project>
