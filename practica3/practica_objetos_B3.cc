@@ -13,10 +13,10 @@
 using namespace std;
 
 // tipos
-typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, ROTACION, ARTICULADO, PROPIO} _tipo_objeto;
+typedef enum{CUBO, PIRAMIDE, OBJETO_PLY, ROTACION, ARTICULADO, OBJETO_CREADO} _tipo_objeto;
 _tipo_objeto t_objeto=CUBO;
 _modo   modo=POINTS;
-bool anim_activa = false;
+bool animacion_activa = false;
 float grado_libertad = 0.02;
 
 // variables que definen la posicion de la camara en coordenadas polares
@@ -127,7 +127,7 @@ switch (t_objeto){
         case OBJETO_PLY: ply.draw(modo,1.0,0.6,0.0,0.0,1.0,0.3,2);break;
         case ROTACION: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
         case ARTICULADO: tanque.draw(modo,0.5,0.7,0.2,0.3,0.6,0.3,2);break;
-        case PROPIO: flexo.draw(modo,1,1,0,0.8,0.8,0,
+        case OBJETO_CREADO: flexo.draw(modo,1,1,0,0.8,0.8,0,
                                 0.9,0.2,0.0,0.8,0.1,0.0,
                                 0.0,0.0,0.0,0.2,0.2,0.2,2);break;
 	}
@@ -192,9 +192,9 @@ switch (toupper(Tecla1)){
         case 'O':t_objeto=OBJETO_PLY;break;	
         case 'R':t_objeto=ROTACION;break;
         case 'A':t_objeto=ARTICULADO;break;
-        case 'B':t_objeto=PROPIO;break;
-        case 'M':if(anim_activa==false){anim_activa=true;}
-                else {anim_activa=false;}break;
+        case 'B':t_objeto=OBJETO_CREADO;break;
+        case 'M':if(animacion_activa==false){animacion_activa=true;}
+                else {animacion_activa=false;}break;
         case ',':flexo.giro_semibrazo_base+=5;
                         if (flexo.giro_semibrazo_base>flexo.giro_semibrazo_base_max) flexo.giro_semibrazo_base=flexo.giro_semibrazo_base_max;
                         break;break;
@@ -264,7 +264,7 @@ glutPostRedisplay();
 }
 
 void anim4(){
-        if(anim_activa){
+        if(animacion_activa){
                 if(flexo.salto>0.0){
                         flexo.salto-=0.0005;
                 }
@@ -276,7 +276,7 @@ void anim4(){
 }
 
 void anim3(){
-        if(anim_activa){
+        if(animacion_activa){
                 if(flexo.salto<0.4){
                         flexo.salto+=0.0005;
                 }
@@ -288,7 +288,7 @@ void anim3(){
 }
 
 void anim2(){
-        if(anim_activa){
+        if(animacion_activa){
                 if (flexo.giro_cabeza_semibrazo<-60){
                 flexo.giro_cabeza_semibrazo+=grado_libertad;
                 flexo.giro_semibrazo_base-=grado_libertad;
@@ -301,7 +301,7 @@ void anim2(){
 }
 
 void anim1(){
-        if (anim_activa){
+        if (animacion_activa){
                 if(flexo.giro_cabeza_semibrazo>-110){
                         flexo.giro_cabeza_semibrazo-=grado_libertad;
                         flexo.giro_semibrazo_base+=grado_libertad;
