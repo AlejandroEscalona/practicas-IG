@@ -32,11 +32,8 @@
   <component name="ChangeListManager">
     <list default="true" id="85d27dab-3195-47b0-bb63-2501cfbf02b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica3/file_ply_stl.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica3/grafo.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica3/objetos_B3.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica3/practica_objetos_B3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica3/practica_objetos_B3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +57,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -73,8 +71,14 @@
       <option name="presentableId" value="Default" />
       <updated>1606500306621</updated>
       <workItem from="1606500307710" duration="2000" />
+      <workItem from="1606500563808" duration="220000" />
+      <workItem from="1606500793446" duration="12000" />
+      <workItem from="1606501171077" duration="23000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -86,11 +90,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog" timestamp="1606500308776">
+    <state x="2338" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606500623597">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500308776" />
+    <state x="2338" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500623597" />
+    <state x="2571" y="292" width="618" height="522" key="find.popup" timestamp="1606500779461">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2571" y="292" width="618" height="522" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500779461" />
+    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog" timestamp="1606501181144">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1606501181144" />
+    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500804257" />
+    <state x="2543" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606500774556">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="259" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500774556" />
   </component>
 </project>

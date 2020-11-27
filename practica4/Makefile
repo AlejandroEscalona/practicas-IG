@@ -21,9 +21,11 @@ LDFLAGS=  -lGL -lGLU -lglut -lsupc++ -lm -lc -lstdc++ -lpthread -L/usr/lib/nvidi
 #
 CC = g++
 
+x: $(TARGETS)
+	./$(TARGETS) beethoven
 # orden que sera ejecutada por defecto
 #
-default : $(TARGETS) 
+#default : $(TARGETS) 
 
 # regla de ejecucion
 #

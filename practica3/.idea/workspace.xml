@@ -28,12 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25e929f6-891d-41df-9858-1fe8b405d6b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file_ply_stl.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grafo.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/objetos_B3.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/practica_objetos_B3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/practica_objetos_B3.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practica4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +73,7 @@
       <workItem from="1605068528663" duration="1215000" />
       <workItem from="1606493225247" duration="129000" />
       <workItem from="1606500250574" duration="43000" />
+      <workItem from="1606500563860" duration="9000" />
     </task>
     <servers />
   </component>
