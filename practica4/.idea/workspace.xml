@@ -32,18 +32,55 @@
   <component name="ChangeListManager">
     <list default="true" id="85d27dab-3195-47b0-bb63-2501cfbf02b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practica4_NoeliaEscaleraMejias_C1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/leame.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objetos_B4.cc" beforeDir="false" afterPath="$PROJECT_DIR$/objetos_B4.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objetos_B4.h" beforeDir="false" afterPath="$PROJECT_DIR$/objetos_B4.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practica_objetos_B4.cc" beforeDir="false" afterPath="$PROJECT_DIR$/practica_objetos_B4.cc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MakefileLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="practica4" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="practica4" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="projectSyncType">
       <map>
         <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
@@ -60,7 +97,8 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practica3" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -74,6 +112,8 @@
       <workItem from="1606500563808" duration="220000" />
       <workItem from="1606500793446" duration="12000" />
       <workItem from="1606501171077" duration="23000" />
+      <workItem from="1606501355046" duration="32000" />
+      <workItem from="1606501392807" duration="821000" />
     </task>
     <servers />
   </component>
@@ -97,15 +137,19 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2338" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500623597" />
-    <state x="2571" y="292" width="618" height="522" key="find.popup" timestamp="1606500779461">
+    <state x="2663" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606501452865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2571" y="292" width="618" height="522" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500779461" />
-    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog" timestamp="1606501181144">
+    <state x="2663" y="311" width="424" height="491" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606501452865" />
+    <state x="2983" y="311" width="764" height="616" key="find.popup" timestamp="1606501430693">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2983" y="311" width="764" height="616" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606501430693" />
+    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog" timestamp="1606501358823">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1606501181144" />
-    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606500804257" />
+    <state x="2317" y="457" width="1116" height="217" key="makefile.clean.confirm.dialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606501358823" />
     <state x="2543" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1606500774556">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

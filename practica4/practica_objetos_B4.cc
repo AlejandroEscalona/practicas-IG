@@ -1,7 +1,6 @@
 //**************************************************************************
 // Práctica 4 usando objetos
-// Noelia Escalera Mejías
-//**************************************************************************
+// Alejandro Escalona García//**************************************************************************
 
 #include <GL/glut.h>
 #include <ctype.h>
@@ -177,10 +176,10 @@ switch (t_objeto){
         case OBJETO_PLY: ply.draw(modo,1.0,0.6,0.0,0.0,1.0,0.3,2);break;
         case ROTACION: rotacion.draw(modo,1.0,0.0,0.0,0.0,1.0,0.0,2);break;
         case ARTICULADO: tanque.draw(modo,0.5,0.7,0.2,0.3,0.6,0.3,2);break;
-        case PROPIO: flexo.draw(modo,0.9,0.9,0.9,0.8,0.8,0.8,
-                                0.0,0.9,0.9,0.0,0.8,0.8,
-                                0.0,0.0,0.0,0.1,0.1,0.1,2);break;
-	}
+        case PROPIO: flexo.draw(modo,1,1,0,0.8,0.8,0,
+                                0.9,0.2,0.0,0.8,0.1,0.0,
+                                0.0,0.0,0.0,0.2,0.2,0.2,2);break;
+    }
 }
 
 
