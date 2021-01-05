@@ -24,7 +24,7 @@ CC = g++
 # orden que sera ejecutada por defecto
 #
 default : $(TARGETS)
-
+			./$(TARGETS) beethoven
 # regla de ejecucion
 #
 $(TARGETS) : file_ply_stl.o objetos_5.o practica_objetos_5.o

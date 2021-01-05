@@ -13,41 +13,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de17b1b9-925d-4baa-bf25-b80ad3b2137c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../practica4/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../practica4/practica_4_alejandro_escalona.tgz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/practica5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beethoven.ply" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file_ply_stl.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file_ply_stl.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leame.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objetos_5.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objetos_5.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practica_objetos_5.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/seleccion_color.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_code.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_code_seleccion_color.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vertex.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/file_ply_stl.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/objetos_B4.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/objetos_B4.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/objetos_B4.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/practica_objetos_B4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/practica_objetos_B4.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/practica_objetos_B4.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/practica_objetos_B4.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -93,6 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
@@ -111,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609866892010</updated>
       <workItem from="1609866893110" duration="42000" />
+      <workItem from="1609866940796" duration="323000" />
     </task>
     <servers />
   </component>
