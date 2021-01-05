@@ -1,9 +1,10 @@
 //**************************************************************************
-// Práctica 4 Iluminación
-// Alejandro Escalona García//**************************************************************************
+// Práctica 5
+// Alejandro Escalona García
+//**************************************************************************
 
-#include "objetos_B4.h"
-
+#include "objetos_5.h"
+bool seleccionadas[12]={false};
 
 //*************************************************************************
 // _puntos3D
@@ -17,7 +18,8 @@ _puntos3D::_puntos3D()
 // dibujar puntos
 //*************************************************************************
 
-void _puntos3D::draw_puntos(float r, float g, float b, int grosor)
+
+void _puntos3D::draw_puntos(float r, float g, float b, int grosor, int cara_escogida, bool color_normal, bool es_base)
 {
 //**** usando vertex_array ****
 glPointSize(grosor);
@@ -44,51 +46,80 @@ glEnd();*/
 
 _triangulos3D::_triangulos3D()
 {
-	ambiente_difusa = {0.0, 0.5, 0.5, 0.1};
-	brillo = 10;
-	especular = {0.5, 0.1, 0.1, 1};
 }
+
 
 //*************************************************************************
 // dibujar en modo arista
 //*************************************************************************
 
-void _triangulos3D::draw_aristas(float r, float g, float b, int grosor)
+void _triangulos3D::draw_aristas(float r, float g, float b, int grosor, int cara_escogida, bool color_normal, bool es_base)
 {
-//**** usando vertex_array ****
+int i;
 glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
 glLineWidth(grosor);
-glColor3f(r,g,b);
-
-glEnableClientState(GL_VERTEX_ARRAY);
-glVertexPointer(3,GL_FLOAT,0,&vertices[0]);
-glDrawElements(GL_TRIANGLES,caras.size()*3,GL_UNSIGNED_INT,&caras[0]);
-
-/*int i;
-glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-glLineWidth(grosor);
-glColor3f(r,g,b);
+float r_aux, g_aux, b_aux;
 glBegin(GL_TRIANGLES);
 for (i=0;i<caras.size();i++){
+	if (es_base){
+		if(cara_escogida==i && !color_normal){
+		seleccionadas[i] = true;
+		r_aux=0.3;g_aux=0.9;b_aux=0.3;
+	}
+	else if(seleccionadas[i] && cara_escogida!=i){
+		r_aux=0.3;g_aux=0.9;b_aux=0.3;
+	}
+	else if (!seleccionadas[i]){
+		r_aux=r;g_aux=g;b_aux=b;
+	}
+	else if (seleccionadas[i] && cara_escogida==i){
+		r_aux=r;g_aux=g;b_aux=b;
+		seleccionadas[i] = false;
+	}
+	}
+	else{
+		r_aux=r;g_aux=g;b_aux=b;
+	}
+	glColor3f(r_aux,g_aux,b_aux);
 	glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
 	glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
 	glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
 	}
-glEnd();*/
+glEnd();
 }
 
 //*************************************************************************
 // dibujar en modo sólido
 //*************************************************************************
 
-void _triangulos3D::draw_solido(float r, float g, float b)
+void _triangulos3D::draw_solido(float r, float g, float b, int cara_escogida, bool color_normal, bool es_base)
 {
 int i;
 
 glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
-glColor3f(r,g,b);
+float r_aux, g_aux, b_aux;
 glBegin(GL_TRIANGLES);
 for (i=0;i<caras.size();i++){
+	if (es_base){
+		if(cara_escogida==i && !color_normal){
+		seleccionadas[i] = true;
+		r_aux=0.3;g_aux=0.9;b_aux=0.3;
+	}
+	else if(seleccionadas[i] && cara_escogida!=i){
+		r_aux=0.3;g_aux=0.9;b_aux=0.3;
+	}
+	else if (!seleccionadas[i]){
+		r_aux=r;g_aux=g;b_aux=b;
+	}
+	else if (seleccionadas[i] && cara_escogida==i){
+		r_aux=r;g_aux=g;b_aux=b;
+		seleccionadas[i] = false;
+	}
+	}
+	else{
+		r_aux=r;g_aux=g;b_aux=b;
+	}
+	glColor3f(r_aux,g_aux,b_aux);
 	glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
 	glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
 	glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
@@ -100,113 +131,86 @@ glEnd();
 // dibujar en modo sólido con apariencia de ajedrez
 //*************************************************************************
 
-void _triangulos3D::draw_solido_ajedrez(float r1, float g1, float b1, float r2, float g2, float b2)
+void _triangulos3D::draw_solido_ajedrez(float r1, float g1, float b1, float r2, float g2, float b2, int cara_escogida, bool color_normal, bool es_base)
 {
 int i;
 glPolygonMode(GL_FRONT_AND_BACK,GL_FILL);
 glBegin(GL_TRIANGLES);
+float r1_aux, g1_aux, b1_aux, r2_aux, g2_aux, b2_aux;
 for (i=0;i<caras.size();i++){
-	if (i%2==0) glColor3f(r1,g1,b1);
-	else glColor3f(r2,g2,b2);
-	glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
-	glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
-	glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
+	if (es_base){
+		if(cara_escogida==i && !color_normal){
+		seleccionadas[i] = true;
+		r1_aux=0.3;g1_aux=0.9;b1_aux=0.3;r2_aux=0.4;g2_aux=0.8;b2_aux=0.4;
+	}
+	else if(seleccionadas[i] && cara_escogida!=i){
+		r1_aux=0.3;g1_aux=0.9;b1_aux=0.3;r2_aux=0.4;g2_aux=0.8;b2_aux=0.4;
+	}
+	else if (!seleccionadas[i]){
+		r1_aux=r1;g1_aux=g1;b1_aux=b1;r2_aux=r2;g2_aux=g2;b2_aux=b2;
+	}
+	else if (seleccionadas[i] && cara_escogida==i){
+		r1_aux=r1;g1_aux=g1;b1_aux=b1;r2_aux=r2;g2_aux=g2;b2_aux=b2;
+		seleccionadas[i] = false;
+	}
+	}
+	else{
+		r1_aux=r1;g1_aux=g1;b1_aux=b1;r2_aux=r2;g2_aux=g2;b2_aux=b2;
+	}
+	if (i%2==0) glColor3f(r1_aux,g1_aux,b1_aux);
+			else glColor3f(r2_aux,g2_aux,b2_aux);
+			glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
+			glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
+			glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
 	}
 glEnd();
 }
 
-void _triangulos3D::calcular_normales_caras(){
-	if (!b_normales_caras){
-		for (int i=0; i<caras.size(); i++){
-			_vertex3f p0 = vertices[caras[i]._0];
-			_vertex3f p1 = vertices[caras[i]._1];
-			_vertex3f p2 = vertices[caras[i]._2];
-			_vertex3f normal = (p1-p0).cross_product(p2-p0);
-			float modulo = sqrt(pow(normal.x,2)+pow(normal.y,2)+pow(normal.z,2));
-			normal.x = normal.x/modulo;
-			normal.y = normal.y/modulo;
-			normal.z = normal.z/modulo;
-			normales_caras.push_back(normal);
-		}
-		b_normales_caras = true;
+//*************************************************************************
+// dibujar en modo selección
+//*************************************************************************
+
+void _triangulos3D::draw_seleccion_color(float r, float g, float b)
+{
+  
+	int i;
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glColor3ub(r,g,b);
+	glBegin(GL_TRIANGLES);
+	for (i=0;i<caras.size();i++){
+		glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
+		glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
+		glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
+
 	}
+    glEnd();
 }
 
-void _triangulos3D::calcular_normales_vertices(){
-	if (!b_normales_vertices){
-		for (int j=0; j<vertices.size(); j++){
-			vector<_vertex3f> aux;
-			for (int i=0; i<caras.size(); i++){
-				if (vertices[caras[i]._0]==vertices[j] || vertices[caras[i]._1]==vertices[j] || vertices[caras[i]._2]==vertices[j]){
-					aux.push_back(normales_caras[i]);
-				}
-			}
-			_vertex3f normal;
-			normal.x = 0;
-			normal.y = 0;
-			normal.z = 0;
-			for (int k=0; k<aux.size(); k++){
-				normal.x += aux[k].x;
-				normal.y += aux[k].y;
-				normal.z += aux[k].z;
-			}
-			normal.x = normal.x/aux.size();
-			normal.y = normal.y/aux.size();
-			normal.z = normal.z/aux.size();
-			float modulo = sqrt(pow(normal.x,2)+pow(normal.y,2)+pow(normal.z,2));
-			normal.x = normal.x/modulo;
-			normal.y = normal.y/modulo;
-			normal.z = normal.z/modulo;
-			normales_vertices.push_back(normal);
-		}
-		b_normales_vertices = true;
-	}	
+void _triangulos3D::draw_seleccion_triangulos(float r, float g, float b)
+{
+	int i, inc = 0;
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	glBegin(GL_TRIANGLES);
+	for (i=0;i<caras.size();i++){
+		glColor3ub(r+inc,g+inc,b+inc);
+		glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
+		glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
+		glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
+		inc++;
+	}
+    glEnd();
 }
-
 //*************************************************************************
 // dibujar con distintos modos
 //*************************************************************************
 
-void _triangulos3D::draw_sombreado_plano(){
-	int i;
-	calcular_normales_caras();
-	glShadeModel(GL_FLAT);
-	glBegin(GL_TRIANGLES);
-	for (i=0;i<caras.size();i++){
-		glNormal3f(normales_caras[i].x,normales_caras[i].y,normales_caras[i].z);
-		glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
-		glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
-		glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
-		}
-	glEnd();
-}
-
-void _triangulos3D::draw_sombreado_gouraud(){
-	int i;
-	calcular_normales_caras();
-	calcular_normales_vertices();
-	glShadeModel(GL_SMOOTH);
-	glBegin(GL_TRIANGLES);
-	for (i=0;i<caras.size();i++){
-		glNormal3f(normales_vertices[caras[i]._0].x,normales_vertices[caras[i]._0].y,normales_vertices[caras[i]._0].z);
-		glVertex3fv((GLfloat *) &vertices[caras[i]._0]);
-		glNormal3f(normales_vertices[caras[i]._1].x,normales_vertices[caras[i]._1].y,normales_vertices[caras[i]._1].z);
-		glVertex3fv((GLfloat *) &vertices[caras[i]._1]);
-		glNormal3f(normales_vertices[caras[i]._2].x,normales_vertices[caras[i]._2].y,normales_vertices[caras[i]._2].z);
-		glVertex3fv((GLfloat *) &vertices[caras[i]._2]);
-		}
-	glEnd();
-}
-
-void _triangulos3D::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor)
+void _triangulos3D::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor, int cara_escogida, bool color_normal, bool es_base)
 {
 switch (modo){
-	case POINTS:draw_puntos(r1, g1, b1, grosor);break;
-	case EDGES:draw_aristas(r1, g1, b1, grosor);break;
-	case SOLID_CHESS:draw_solido_ajedrez(r1, g1, b1, r2, g2, b2);break;
-	case SOLID:draw_solido(r1, g1, b1);break;
-	case SUAVIZADO_PLANO:draw_sombreado_plano();break;
-	case SUAVIZADO_GOURAUD:draw_sombreado_gouraud();break;
+	case POINTS:draw_puntos(r1, g1, b1, grosor,cara_escogida,color_normal,es_base);break;
+	case EDGES:draw_aristas(r1, g1, b1, grosor,cara_escogida,color_normal,es_base);break;
+	case SOLID_CHESS:draw_solido_ajedrez(r1, g1, b1, r2, g2, b2,cara_escogida,color_normal,es_base);break;
+	case SOLID:draw_solido(r1, g1, b1,cara_escogida,color_normal,es_base);break;
 	}
 }
 
@@ -531,21 +535,7 @@ if (fabs(perfil[0].x)>0.0)
 			cara_aux._2 = (i+num_aux)%(num*num_aux);
 			caras.push_back(cara_aux);
 		}
-	  }	
-	}
-	
-	if (f==_figura::ESFERA)
-	{
-		for (int i=0; i<vertices.size(); i++){
-			_vertex3f normal;
-			normal = vertices[i]; 
-			float modulo = sqrt(pow(normal.x,2)+pow(normal.y,2)+pow(normal.z,2));
-			normal.x = normal.x/modulo;
-			normal.y = normal.y/modulo;
-			normal.z = normal.z/modulo;
-			normales_vertices.push_back(normal);
-		}
-	    b_normales_vertices = true;
+	  }
 	}
 }
 //************************************************************************
@@ -700,7 +690,7 @@ _junta::_junta()
 	junta.parametros(perfil_junta,20,_figura::ESFERA,1);
 }
 
-void _junta::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor)
+void _junta::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor, bool es_base)
 {
 	glPushMatrix();
 	glScalef(0.1,0.1,0.1);
@@ -708,15 +698,29 @@ void _junta::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, 
 	glPopMatrix();
 }
 
+void _junta::draw_sel(float r, float g, float b){
+	glPushMatrix();
+	glScalef(0.1,0.1,0.1);
+	junta.draw_seleccion_color(r,g,b);
+	glPopMatrix();
+}
+
 _base_flexo::_base_flexo()
 {
 }
 
-void _base_flexo::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor)
+void _base_flexo::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor, int cara_escogida, bool color_normal,bool es_base)
 {
 	glPushMatrix();
 	glScalef(1,0.25,1);
-	base.draw(modo,r1,g1,b1,r2,g2,b2,grosor);
+	base.draw(modo,r1,g1,b1,r2,g2,b2,grosor,cara_escogida,color_normal,es_base);
+	glPopMatrix();
+}
+
+void _base_flexo::draw_sel(float r, float g, float b){
+	glPushMatrix();
+	glScalef(1,0.25,1);
+	base.draw_seleccion_triangulos(r, g, b);
 	glPopMatrix();
 }
 
@@ -735,7 +739,7 @@ _semibrazo::_semibrazo()
 	semi.parametros(perfil_c,20,_figura::CILINDRO,1);
 }
 
-void _semibrazo::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor)
+void _semibrazo::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, float grosor, bool es_base)
 {
 	glPushMatrix();
 	glScalef(0.25,1.25,0.25);
@@ -743,6 +747,12 @@ void _semibrazo::draw(_modo modo, float r1, float g1, float b1, float r2, float 
 	glPopMatrix();
 }
 
+void _semibrazo::draw_sel(float r, float g, float b){
+	glPushMatrix();
+	glScalef(0.25,1.25,0.25);
+	semi.draw_seleccion_color(r,g,b);
+	glPopMatrix();
+}
 
 _cabeza::_cabeza()
 {
@@ -774,24 +784,40 @@ _cabeza::_cabeza()
 }
 
 void _cabeza::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, 
-				float r3, float g3, float b3, float r4, float g4, float b4, float grosor)
+				float r3, float g3, float b3, float r4, float g4, float b4, float grosor, bool es_base)
 {
 	glPushMatrix();
 	glTranslatef(0.0,0.75,0.0);
 	glScalef(0.5,0.5,0.5);
-	cilindro.draw(modo,r3,g3,b3,r4,g4,b4,grosor);
+	cilindro.draw(modo,r1,g1,b1,r2,g2,b2,grosor,es_base);
 	glPopMatrix();
 	glPushMatrix();
 	glTranslatef(0.0,0.25,0.0);
-	cono.draw(modo,r3,g3,b3,r4,g4,b4,grosor);
+	cono.draw(modo,r1,g1,b1,r2,g2,b2,grosor,es_base);
 	glPopMatrix();
 	glPushMatrix();
 	glTranslatef(0.0,0.25,0.0);
 	glScalef(0.25,0.25,0.25);
-	bombilla.draw(modo,r1,g1,b1,r2,g2,b2,grosor);
+	bombilla.draw(modo,r3,g3,b3,r4,g4,b4,grosor,es_base);
 	glPopMatrix();
 }
 
+void _cabeza::draw_sel(float r1, float g1, float b1, float r2, float g2, float b2){
+	glPushMatrix();
+	glTranslatef(0.0,0.75,0.0);
+	glScalef(0.5,0.5,0.5);
+	cilindro.draw_seleccion_color(r1,g1,b1);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0,0.25,0.0);
+	cono.draw_seleccion_color(r1,g1,b1);
+	glPopMatrix();
+	glPushMatrix();
+	glTranslatef(0.0,0.25,0.0);
+	glScalef(0.25,0.25,0.25);
+	bombilla.draw_seleccion_color(r2,g2,b2);
+	glPopMatrix();
+}
 
 _flexo::_flexo()
 {
@@ -816,31 +842,36 @@ _flexo::_flexo()
 	salto = 0.0;
 }
 
-void  _flexo::draw(_modo modo, float r1, float g1, float b1, float r2, float g2, float b2, 
-				float r3, float g3, float b3, float r4, float g4, float b4,
-				float r5, float g5, float b5, float r6, float g6, float b6, float grosor)
+void  _flexo::draw(_modo modo, float r1_cabeza, float g1_cabeza, float b1_cabeza, float r2_cabeza, float g2_cabeza, float b2_cabeza, 
+                     float r1_bombilla, float g1_bombilla, float b1_bombilla, float r2_bombilla, float g2_bombilla, float b2_bombilla,
+					 float r1_base, float g1_base, float b1_base,  float r2_base, float g2_base, float b2_base, 
+                     float r1_semi1, float g1_semi1, float b1_semi1, float r2_semi1, float g2_semi1, float b2_semi1,
+                     float r1_semi2, float g1_semi2, float b1_semi2, float r2_semi2, float g2_semi2, float b2_semi2,
+					 float r1_junta1, float g1_junta1, float b1_junta1, float r2_junta1, float g2_junta1, float b2_junta1,
+                     float r1_junta2, float g1_junta2, float b1_junta2, float r2_junta2, float g2_junta2, float b2_junta2, 
+                     float r1_junta3, float g1_junta3, float b1_junta3, float r2_junta3, float g2_junta3, float b2_junta3,float grosor,int cara_escogida, bool color_normal,bool es_base)
 {
 	glTranslatef(0.0,salto,0.0);
 	glTranslatef(0.0,-1.5,0.0);
 	glPushMatrix();
 	glTranslatef(0,0.125,0);
-	base.draw(modo,r3,g3,b3,r4,g4,b4,grosor);
+	base.draw(modo,r1_base,g1_base,b1_base,r2_base,g2_base,b2_base,grosor,cara_escogida,color_normal,true);
 	glPopMatrix();
 	glTranslatef(0,0.35,0);
 	glPushMatrix();
 	glRotatef(giro_flexo,0,1,0);
-	junta3.draw(modo,r5,g5,b5,r6,g6,b6,grosor);
+	junta3.draw(modo,r1_junta3,g1_junta3,b1_junta3,r2_junta3,g2_junta3,b2_junta3,grosor,false);
 	glRotatef(giro_semibrazo_base,0,0,1);
 	glTranslatef(0.0,0.1,0.0);
-	semibrazo2.draw(modo,r5,g5,b5,r6,g6,b6,grosor);
+	semibrazo2.draw(modo,r1_semi2,g1_semi2,b1_semi2,r2_semi2,g2_semi2,b2_semi2,grosor,false);
 	glPushMatrix();
 	glTranslatef(0.0,1.35,0.0);
-	junta2.draw(modo,r5,g5,b5,r6,g6,b6,grosor);
+	junta2.draw(modo,r1_junta2,g1_junta2,b1_junta2,r2_junta2,g2_junta2,b2_junta2,grosor,false);
 	glRotatef(giro_cabeza_semibrazo,0,0,1);
 	glTranslatef(0.0,0.1,0.0);
-	semibrazo1.draw(modo,r5,g5,b5,r6,g6,b6,grosor);
+	semibrazo1.draw(modo,r1_semi1,g1_semi1,b1_semi1,r2_semi1,g2_semi1,b2_semi1,grosor,false);
 	glTranslatef(0,1.35,0);
-	junta1.draw(modo,r5,g5,b5,r6,g6,b6,grosor);
+	junta1.draw(modo,r1_junta1,g1_junta1,b1_junta1,r2_junta1,g2_junta1,b2_junta1,grosor,false);
 	glPushMatrix();
 	glRotatef(giro_cabeza_y,0,1,0);
 	glTranslatef(0.0,0.35,0.0);
@@ -848,7 +879,7 @@ void  _flexo::draw(_modo modo, float r1, float g1, float b1, float r2, float g2,
 	glTranslatef(0.25,0.0,0.0);
 	glRotatef(90,0,0,1);
 	glTranslatef(0.0,-0.75,0.0);
-	cabeza.draw(modo,r1,g1,b1,r2,g2,b2,r3,g3,b3,r4,g4,b4,grosor);
+	cabeza.draw(modo,r1_cabeza,g1_cabeza,b1_cabeza,r2_cabeza,g2_cabeza,b2_cabeza,r1_bombilla,g1_bombilla,b1_bombilla,r2_bombilla,g2_bombilla,b2_bombilla,grosor,false);
 	glPopMatrix();
 	glPopMatrix();
 	glPopMatrix();

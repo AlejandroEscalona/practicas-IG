@@ -2,11 +2,11 @@
 #
 # nombre del fichero ejecutable
 #
-TARGETS= practica_objetos_B4
+TARGETS= practica_objetos_5
 
 # banderas para el compilador (C y C++). Se indican los directorios donde se puenden
 # encontrar ficheros para incluir mediante la opcion -I
-# la opcion -g sirve para permitir la depuración
+# la opcion -g sirve para permitir la depuraciï¿½n
 #
 CFLAGS=    -g -DXWINDOWS -DSHM -I/usr/include -I.
 CXXFLAGS=  -g -DXWINDOWS -DSHM -I/usr/include -I.
@@ -21,16 +21,14 @@ LDFLAGS=  -lGL -lGLU -lglut -lsupc++ -lm -lc -lstdc++ -lpthread -L/usr/lib/nvidi
 #
 CC = g++
 
-x: $(TARGETS)
-	./$(TARGETS) beethoven
 # orden que sera ejecutada por defecto
 #
-#default : $(TARGETS) 
+default : $(TARGETS)
 
 # regla de ejecucion
 #
-$(TARGETS) : file_ply_stl.o objetos_B4.o practica_objetos_B4.o
-	$(CC) -o $@ $(CXXFLAGS) file_ply_stl.o objetos_B4.o practica_objetos_B4.o $(LDFLAGS)
+$(TARGETS) : file_ply_stl.o objetos_5.o practica_objetos_5.o
+	$(CC) -o $@ $(CXXFLAGS) file_ply_stl.o objetos_5.o practica_objetos_5.o $(LDFLAGS)
 
 #
 #
@@ -55,6 +53,7 @@ superclean:
 #
 tgz:
 	rm -f *.o
+	rm *~
 	rm -f $(TARGETS)
 	tar -zcvf $(TARGETS).tgz *
 

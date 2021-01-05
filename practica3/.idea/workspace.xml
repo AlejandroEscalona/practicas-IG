@@ -27,17 +27,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25e929f6-891d-41df-9858-1fe8b405d6b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/Practica4_NoeliaEscaleraMejias_C1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/leame.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/leame.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/objetos_B4.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/objetos_B4.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/objetos_B4.h" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/objetos_B4.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../practica4/practica_objetos_B4.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../practica4/practica_objetos_B4.cc" afterDir="false" />
-    </list>
+    <list default="true" id="25e929f6-891d-41df-9858-1fe8b405d6b3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +72,7 @@
       <workItem from="1606493225247" duration="129000" />
       <workItem from="1606500250574" duration="43000" />
       <workItem from="1606500563860" duration="9000" />
-      <workItem from="1606501455393" duration="638000" />
+      <workItem from="1606501455393" duration="898000" />
     </task>
     <servers />
   </component>
